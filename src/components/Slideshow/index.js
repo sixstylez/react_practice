@@ -7,8 +7,22 @@ import Slideshow3 from '../../static/slideshow/slideshow_3.jpg';
 import Slideshow4 from '../../static/slideshow/slideshow_4.jpg';
 import Slideshow5 from '../../static/slideshow/slideshow_5.jpg';
 import MainPrompt from '../MainPrompt';
+import Selections from '../Selections';
 
 export class index extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      selections: false
+    };
+    this.handler = this.handler.bind(this);
+  }
+
+  handler() {
+    this.setState({
+      selections: !this.state.selections
+    });
+  }
   render() {
     const properties = {
       duration: 5000,
@@ -17,6 +31,7 @@ export class index extends Component {
       indicators: false,
       arrows: true
     };
+    const { selections } = this.state;
 
     return (
       <div className="slide-container">
@@ -37,7 +52,14 @@ export class index extends Component {
             <div style={{ backgroundImage: `url(${Slideshow5})` }} />
           </div>
         </Slide>
-        <MainPrompt />
+        <div className="prompt">
+          {!selections && (
+            <MainPrompt handler={this.handler} selections={selections} />
+          )}
+          {selections && (
+            <Selections handler={this.handler} selections={selections} />
+          )}
+        </div>
       </div>
     );
   }
