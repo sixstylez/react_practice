@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  background-color: #3c444c;
+  height: 200px;
+}
+#backgroundImage {
+  display: flex;
+  padding-left: 100px;
+  padding-top: 50px;
+  margin-bottom: 70px;
+  min-width: 80%;
+  max-height: 90%;
+  opacity: 0.3;
+  transform: rotate(5.21deg);
+}
+#logo {
+  position: absolute;
+  left: 50%;
+  height: 200px;
+}

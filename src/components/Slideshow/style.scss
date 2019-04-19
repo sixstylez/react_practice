@@ -1,0 +1,58 @@
+.slide-container {
+  width: 100%;
+  margin: auto;
+  position: relative;
+  display: block;
+}
+
+h3 {
+  text-align: center;
+}
+
+.each-slide > div {
+  display: relative;
+  align-items: center;
+
+  justify-content: center;
+  background-size: cover;
+  height: 40em;
+  position: relative;
+  display: block;
+}
+
+// .each-slide span {
+//   padding: 20px;
+//   font-size: 20px;
+//   background: #efefef;
+//   text-align: center;
+// }
+
+.textContainer {
+  background: rgba(12, 14, 14, 0.459);
+  position: absolute;
+  height: 250px;
+  width: 500px;
+  left: 36%;
+  top: 30%;
+}
+
+h2 {
+  color: white;
+  font-family: Montserrat;
+  text-align: center;
+  font-size: 44px;
+}
+
+p {
+  color: white;
+  text-align: center;
+}
+
+button {
+  background: linear-gradient(90deg, #54f280 -21.05%, #545af2 121.05%);
+  color: white;
+  border-radius: 5px;
+  width: 202.52px;
+  height: 49.04px;
+  margin-left: 150px;
+}
