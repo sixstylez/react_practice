@@ -6,6 +6,7 @@ import Slideshow2 from '../../static/slideshow/slideshow_2.jpg';
 import Slideshow3 from '../../static/slideshow/slideshow_3.jpg';
 import Slideshow4 from '../../static/slideshow/slideshow_4.jpg';
 import Slideshow5 from '../../static/slideshow/slideshow_5.jpg';
+import MainPrompt from '../MainPrompt';
 
 export class index extends Component {
   render() {
@@ -36,14 +37,7 @@ export class index extends Component {
             <div style={{ backgroundImage: `url(${Slideshow5})` }} />
           </div>
         </Slide>
-        <div className="textContainer">
-          <h2>Customized Selections</h2>
-          <p>
-            At Just 4 You Music we can curate a selection just for you based on
-            your musical instrument of choice. Click below to begin!
-          </p>
-          <button>GET STARTED &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></button>
-        </div>
+        <MainPrompt />
       </div>
     );
   }

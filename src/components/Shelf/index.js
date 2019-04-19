@@ -8,6 +8,7 @@ import Spinner from '../Spinner';
 import ShelfHeader from './ShelfHeader';
 import ProductList from './ProductList';
 import Filter from './Filter';
+import FloatCart from '../FloatCart';
 
 import './style.scss';
 
@@ -61,6 +62,7 @@ class Shelf extends Component {
           <ShelfHeader productsLength={products.length} />
           <ProductList products={products} />
         </div>
+        <FloatCart />
       </React.Fragment>
     );
   }
