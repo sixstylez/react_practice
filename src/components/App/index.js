@@ -13,6 +13,17 @@ import About from '../About';
 import Contact from '../Contact';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    console.log(props);
+    this.state = {
+      filter: 'none'
+    };
+  }
+
+  setFilterBass = () => {
+    console.log('hello');
+  };
   render() {
     return (
       <HashRouter>
@@ -20,7 +31,14 @@ class App extends Component {
           <Header />
           <NavBar />
           <div ClassName="content">
-            <Route exact path="/" component={Slideshow} />
+            <Route
+              exact
+              path="/"
+              component={Slideshow}
+              setFilterBass={this.setFilterBass}
+              filterGuitar={this.setFilterGuitar}
+              filterDrums={this.setFilterDrums}
+            />
             <Route exact path="/Shelf" component={Shelf} />
             <Route exact path="/About" component={About} />
             <Route exact path="/Contact" component={Contact} />

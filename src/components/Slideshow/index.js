@@ -17,7 +17,9 @@ export class index extends Component {
     };
     this.handler = this.handler.bind(this);
   }
-
+  // setFilterBass() {
+  //   console.log(this.props);
+  // }
   handler() {
     this.setState({
       selections: !this.state.selections
@@ -57,7 +59,13 @@ export class index extends Component {
             <MainPrompt handler={this.handler} selections={selections} />
           )}
           {selections && (
-            <Selections handler={this.handler} selections={selections} />
+            <Selections
+              handler={this.handler}
+              selections={selections}
+              setFilterBass={this.props.setFilterBass}
+              filterGuitar={this.props.filterGuitar}
+              filterDrums={this.props.filterDrums}
+            />
           )}
         </div>
       </div>
