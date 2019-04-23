@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Selections from '../Selections';
 import './style.scss';
 
 export class index extends Component {

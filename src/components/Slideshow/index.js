@@ -8,6 +8,7 @@ import Slideshow4 from '../../static/slideshow/slideshow_4.jpg';
 import Slideshow5 from '../../static/slideshow/slideshow_5.jpg';
 import MainPrompt from '../MainPrompt';
 import Selections from '../Selections';
+import '../Slideshow';
 
 export class index extends Component {
   constructor(props) {
@@ -17,9 +18,7 @@ export class index extends Component {
     };
     this.handler = this.handler.bind(this);
   }
-  // setFilterBass() {
-  //   console.log(this.props);
-  // }
+  //handle get started button
   handler() {
     this.setState({
       selections: !this.state.selections
@@ -62,9 +61,7 @@ export class index extends Component {
             <Selections
               handler={this.handler}
               selections={selections}
-              setFilterBass={this.props.setFilterBass}
-              filterGuitar={this.props.filterGuitar}
-              filterDrums={this.props.filterDrums}
+              setFilter={this.props.setFilter}
             />
           )}
         </div>
