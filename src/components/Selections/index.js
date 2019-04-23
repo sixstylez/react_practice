@@ -6,7 +6,7 @@ export class index extends Component {
     super(props);
     this.state = { filter: 'none' };
     //this.setFilter = this.setFilter.bind(this);
-    console.log('this is' + this);
+    //console.log('this state is ' + this.state);
   }
 
   // setFilter(f) {

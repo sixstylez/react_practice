@@ -31,8 +31,6 @@ class App extends Component {
               path="/"
               component={Slideshow}
               setFilter={this.setFilter}
-              filterGuitar={this.setFilterGuitar}
-              filterDrums={this.setFilterDrums}
             />
             <Route exact path="/Shelf" component={Shelf} />
             <Route exact path="/About" component={About} />
