@@ -24,6 +24,11 @@ export class index extends Component {
       selections: !this.state.selections
     });
   }
+  // has to be in the direct parent to Slideshow
+  setFilter = filter => {
+    console.log('console: selected filter in SlideShow is' + filter);
+    this.props.setFilterApp(filter);
+  };
   render() {
     const properties = {
       duration: 5000,
@@ -61,7 +66,7 @@ export class index extends Component {
             <Selections
               handler={this.handler}
               selections={selections}
-              setFilter={this.props.setFilter}
+              setFilter={this.setFilter}
             />
           )}
         </div>

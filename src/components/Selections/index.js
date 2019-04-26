@@ -9,9 +9,9 @@ export class index extends Component {
     //console.log('this state is ' + this.state);
   }
 
-  // setFilter(f) {
-  //   this.setState(state => ({
-  //     filter: f
+  //setFilter(f) {
+  //  this.setState(state => ({
+  //    filter: f
   //   }));
   //   console.log(this.state);
   // }

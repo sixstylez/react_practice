@@ -13,11 +13,11 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {};
-    this.setFilter = this.setFilter.bind(this);
+    this.setFilterApp = this.setFilterApp.bind(this);
   }
 
-  setFilter = filter => {
-    console.log('console: selected filter is' + filter);
+  setFilterApp = filter => {
+    console.log('console: selected filter in App is' + filter);
   };
   render() {
     return (
@@ -29,8 +29,7 @@ class App extends Component {
             <Route
               exact
               path="/"
-              component={Slideshow}
-              setFilter={this.setFilter}
+              component={() => <Slideshow setFilterApp={this.setFilterApp} />}
             />
             <Route exact path="/Shelf" component={Shelf} />
             <Route exact path="/About" component={About} />
