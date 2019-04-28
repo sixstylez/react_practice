@@ -25,17 +25,18 @@ class App extends Component {
   };
   render() {
     // TRYING TO REDIRECT TO CATALOG WITH FILTER PROP USING 'search' BOOLEAN
-    if (this.state.search === true) {
-      return (
-        <HashRouter>
-          <Route
-            exact
-            path="/Shelf"
-            render={props => <Shelf {...props} filter={this.state.filter} />}
-          />
-        </HashRouter>
-      );
-    }
+    // if (this.state.search === true) {
+    //   return (
+    //     <HashRouter>
+    //       <Route
+    //         exact
+    //         path="/Shelf"
+    //         render={props => <Shelf {...props} filter={this.state.filter} />}
+    //       />
+    //     </HashRouter>
+    //   );
+    // } else
+    const { search } = this.state;
     return (
       <HashRouter>
         <React.Fragment>
@@ -47,11 +48,24 @@ class App extends Component {
               path="/"
               component={() => <Slideshow setFilterApp={this.setFilterApp} />}
             />
-            <Route
-              exact
-              path="/Shelf"
-              render={props => <Shelf {...props} filter={this.state.filter} />}
-            />
+            {!search && (
+              <Route
+                exact
+                path="/Shelf"
+                render={props => (
+                  <Shelf {...props} filter={this.state.filter} />
+                )}
+              />
+            )}
+            {search && (
+              <Route
+                exact
+                path="/Shelf"
+                render={props => (
+                  <Shelf {...props} filter={this.state.filter} />
+                )}
+              />
+            )}
             <Route exact path="/About" component={About} />
             <Route exact path="/Contact" component={Contact} />
           </div>
