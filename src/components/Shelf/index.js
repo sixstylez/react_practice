@@ -51,6 +51,7 @@ class Shelf extends Component {
   };
 
   render() {
+    console.log('filter passed to catalog is ' + this.props.filter);
     const { products } = this.props;
     const { isLoading } = this.state;
 

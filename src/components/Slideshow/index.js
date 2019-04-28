@@ -59,16 +59,8 @@ export class index extends Component {
           </div>
         </Slide>
         <div className="prompt">
-          {!selections && (
-            <MainPrompt handler={this.handler} selections={selections} />
-          )}
-          {selections && (
-            <Selections
-              handler={this.handler}
-              selections={selections}
-              setFilter={this.setFilter}
-            />
-          )}
+          {!selections && <MainPrompt handler={this.handler} />}
+          {selections && <Selections setFilter={this.setFilter} />}
         </div>
       </div>
     );

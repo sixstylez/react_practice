@@ -6,14 +6,14 @@ export class index extends Component {
     super(props);
     this.state = { showSelections: false };
 
-    this.handleClick = this.handleClick.bind(this);
+    //this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
-    this.setState(state => ({
-      showSelections: true
-    }));
-  }
+  // handleClick() {
+  //   this.setState(state => ({
+  //     showSelections: true
+  //   }));
+  // }
 
   render() {
     return (
