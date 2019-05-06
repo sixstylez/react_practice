@@ -24,18 +24,6 @@ class App extends Component {
     });
   };
   render() {
-    // TRYING TO REDIRECT TO CATALOG WITH FILTER PROP USING 'search' BOOLEAN
-    // if (this.state.search === true) {
-    //   return (
-    //     <HashRouter>
-    //       <Route
-    //         exact
-    //         path="/Shelf"
-    //         render={props => <Shelf {...props} filter={this.state.filter} />}
-    //       />
-    //     </HashRouter>
-    //   );
-    // } else
     const { search } = this.state;
     return (
       <HashRouter>

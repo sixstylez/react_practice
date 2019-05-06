@@ -57,11 +57,10 @@ class Shelf extends Component {
 
     return (
       <React.Fragment>
-        <Filter />
         {isLoading && <Spinner />}
         <div className="shelf-container">
           <ShelfHeader productsLength={products.length} />
-          <ProductList products={products} />
+          <ProductList products={products} filter={this.props.filter} />
         </div>
         <FloatCart />
       </React.Fragment>

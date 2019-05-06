@@ -13,20 +13,6 @@ const Product = ({ product, addProduct }) => {
 
   let productInstallment;
 
-  if (!!product.installments) {
-    const installmentPrice = product.price / product.installments;
-
-    productInstallment = (
-      <div className="installment">
-        <span>or {product.installments} x</span>
-        <b>
-          {product.currencyFormat}
-          {formatPrice(installmentPrice, product.currencyId)}
-        </b>
-      </div>
-    );
-  }
-
   return (
     <div
       className="shelf-item"

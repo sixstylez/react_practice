@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 import './style.scss';
 
 export class index extends Component {
@@ -21,9 +22,17 @@ export class index extends Component {
       <div className="textContainer">
         <h2>Please Select Your Instrument</h2>
         <span>
-          <button onClick={() => this.props.setFilter('bass')}>Bass</button>
-          <button onClick={() => this.props.setFilter('guitar')}>Guitar</button>
-          <button onClick={() => this.props.setFilter('drums')}>Drums</button>
+          <NavLink exact to="../Shelf">
+            <button onClick={() => this.props.setFilter('bass')}>Bass</button>
+          </NavLink>
+          <NavLink exact to="../Shelf">
+            <button onClick={() => this.props.setFilter('guitar')}>
+              Guitar
+            </button>
+          </NavLink>
+          <NavLink exact to="../Shelf">
+            <button onClick={() => this.props.setFilter('drums')}>Drums</button>
+          </NavLink>
         </span>
       </div>
     );
